@@ -1,0 +1,90 @@
+**************************************************************************************
+**************************************BUG FIX LOG*************************************
+**************************************************************************************
+
+
+
+ (Critical)
+Description of the issue
+  App crashes when you hit submit
+	
+Repro steps
+  1. Enter a message and click "Submit"
+	
+System information
+  Virtual Device - Nexus 5X API 25
+	
+Location of bug in the code
+  InputActivity.java, line 35. "Intent intent = new Intent(getApplicationContext(), TextAnalyzerUtil.class);"
+	
+What is the impact of changes to this file? Does changing this file break other ones?
+  The impact of changes to this file is low. This change does not break other code.
+	
+Date/Time of the fix & commit link 
+  10/18/2017 22:15   https://github.com/jmccoy11/Assignment03_StringAnalyzer/commit/2d3992185bb9f720de2f0d20c60c262c26871232
+	
+**************************************************************************************
+
+ (Low)
+Description of the issue
+  You can submit an empty message
+	
+Repro steps
+  1. On InputActivity with no data in the message field, Click "Submit".
+	
+System information
+  Virtual Device - Nexus 5X API 25
+	
+Location of bug in the code
+  InputActivity.java  "There is no validation on the data in the Message field."
+	
+What is the impact of changes to this file? Does changing this file break other ones?
+  The impact of changes to this file is low. This change does not break other code.
+	
+Date/Time of the fix & commit link
+10/18/2017 22:55   https://github.com/jmccoy11/Assignment03_StringAnalyzer/commit/2eed4a14c7a8de218b3746e8163a3c95a3f303c2
+
+**************************************************************************************
+
+ (normal)
+Description of the issue
+  Some of the metrics are not updating with new data
+	
+Repro steps
+  1. Enter a message on first activity and click "Submit"
+	
+System information
+  Virtual Device - Nexus 5X API 25
+	
+Location of bug in the code
+  AnalyzerActivity.java  "Missing the setText for uniqueWords and longestWord."
+	
+What is the impact of changes to this file? Does changing this file break other ones?
+  The impact of changes to this file is low. This change does not break other code.
+	
+Date/Time of the fix & commit link
+10/18/2017 22:37   https://github.com/jmccoy11/Assignment03_StringAnalyzer/commit/89ebe2bb9cc921a15ac57f93c5004c5b0480ed7d
+
+**************************************************************************************
+
+ (normal)
+Description of the issue
+  Analyze another string button doesn’t take you back to the first screen
+	
+Repro steps
+  1. Enter a message and click "Submit"
+	2. Click on "Analyze Another String"
+	
+System information
+  Virtual Device - Nexus 5X API 25
+	
+Location of bug in the code
+  AnalyzerActivity.java  "Missing the ClickListener for the "Analyze Another String" button.
+	
+What is the impact of changes to this file? Does changing this file break other ones?
+  The impact of changes to this file is low. This change does not break other code.
+	
+Date/Time of the fix & commit link
+10/18/2017 22:47   https://github.com/jmccoy11/Assignment03_StringAnalyzer/commit/4dbe640adcbf8b85c021538bb4ac39d3cf7ae7dc
+
+**************************************************************************************
